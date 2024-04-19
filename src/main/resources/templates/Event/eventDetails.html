@@ -36,6 +36,18 @@
 		</form>
 	</div>
 	
+	<h5>Lista de convidados</h5>
+<div class="container" th:each="guest : ${guests}">
+    <div class="row">
+        <div class="input-field col s9">
+            <span th:text="${guest.id}" style="margin-right: 10px;"></span> <!-- Added closing double quote -->
+            <span th:text="${guest.name}"></span>
+        </div>
+    </div>
+</div>
+
+
+	
 	<!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 

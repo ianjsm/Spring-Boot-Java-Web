@@ -52,6 +52,10 @@ public class EventController {
 		Optional<Event> eventDetailsOptional = eventRepository.findById(id);
 		Event event = eventDetailsOptional.orElse(null);
 		mv.addObject("event", event);
+		
+		List<Guest> guests= event.getGuests();
+		mv.addObject("guests", guests);
+		
 		return mv;
 	}
 	
