@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<h1>Lista de eventos</h1>
+<h3><a href="/registerEvent">Cadastrar novo evento</a></h3>
+
+<div th:each="evento : ${eventos}">
+    <div class="row">
+        <p><span th:text="${evento.name}"></span></p>
+        <p><span th:text="${evento.local}"></span></p>
+        <p><span th:text="${evento.date}"></span></p>
+        <p><span th:text="${evento.time}"></span></p>
+    </div>
+</div>
+
+</body>
+</html>
