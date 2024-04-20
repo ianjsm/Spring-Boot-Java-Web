@@ -15,6 +15,7 @@ public class Guest implements Serializable {
 
 	@Id
 	private Long id;
+	
 	private String name;
 
 	@ManyToMany(mappedBy = "guests")

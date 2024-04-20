@@ -27,6 +27,14 @@
     		<p>Horário: <span th:text="${event.time}"></span></p>
 		</div>
 		
+		<div class="row">
+        	<th:block th:if="${mensagem}">
+           		<div class="card-panel red lighten-4">
+                	<span th:text="${mensagem}"></span>
+            	</div>
+        	</th:block>
+    	</div>
+		
 		<form method="post">
 			CPF: <input type="text" value="" name="id"/>
 			Nome: <input type="text" value="" name="name"/>
